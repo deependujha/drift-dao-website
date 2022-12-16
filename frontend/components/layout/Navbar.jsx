@@ -1,41 +1,54 @@
-import React from 'react'
+import React from 'react';
 import { Navbar, Button } from 'flowbite-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const navbar = () => {
-  return (
-    <Navbar
-      fluid={true}
-      rounded={true}
-      className="sticky top-0 bg-opacity-30"
-    >
-      <Navbar.Brand href="/">
-        <span className="self-center whitespace-nowrap text-4xl font-semibold dark:text-white">
-          Drift-DAO
-        </span>
-      </Navbar.Brand>
-      <div className="flex md:order-2">
-        <Button outline={true} gradientDuoTone="purpleToPink" className='mr-3'>
-          visit__website
-        </Button>
-        <Navbar.Toggle />
-      </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="/navbars" active={true} className="text-xl">
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-xl">
-          About
-        </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-xl">
-          Team
-        </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-xl">
-          Reach out to us
-        </Navbar.Link>
-      </Navbar.Collapse>
-    </Navbar>
-  );
-}
+	const router = useRouter();
+	const onBoardDAO = () => {
+		console.log('jai maata di');
+		router.push('/onBoardDAO');
+	};
+	return (
+		<Navbar
+			fluid={true}
+			rounded={false}
+			className="sticky top-0"
+			style={{ backgroundColor: '#170034' }}
+		>
+			<div>
+				<span className="self-center whitespace-nowrap text-4xl font-semibold text-pink-800 dark:text-white ">
+					<Link href="/">Drift-DAO</Link>
+				</span>
+			</div>
+			<div className="flex md:order-2">
+				<Button
+					outline={true}
+					gradientDuoTone="purpleToPink"
+					className="mr-3"
+					onClick={onBoardDAO}
+				>
+					Onboard your DAO 🚀🔥
+				</Button>
+				<Navbar.Toggle />
+			</div>
+			<Navbar.Collapse>
+				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+					<Link href="/#home">Home</Link>
+				</div>
+				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+					<Link href="/#product">About</Link>
+				</div>
+				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+					<Link href="/#team">Our team</Link>
+				</div>
+				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+					<Link href="/#contact">Contact us</Link>
+				</div>
+			</Navbar.Collapse>
+		</Navbar>
+	);
+};
 
-export default navbar
+export default navbar;

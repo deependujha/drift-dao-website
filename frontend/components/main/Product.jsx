@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Product = () => {
 	return (
-		<div className="bg-[url('/images/bg1.jpg')] ">
+		<div className="bg-[url('/images/bg1.jpg')] " id="product">
 			<div className="grid sm:grid-cols-2 gap-4">
 				<div className="">
 					<div className="text-white text-6xl sm:pt-60 pt-20 md:pt-48 text-center">

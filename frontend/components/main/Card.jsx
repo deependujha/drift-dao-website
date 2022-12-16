@@ -3,7 +3,7 @@ import { Card } from 'flowbite-react';
 
 const Cardabout = ({ img, name, role, email, twitter, twitterLink }) => {
 	return (
-		<div className="max-w-sm m-auto my-8">
+		<div className="max-w-sm m-auto ">
 			<Card imgSrc={img}>
 				<h5 className="text-2xl font-bold tracking-tight text-purple-900 dark:text-white">
 					{name}
@@ -15,7 +15,7 @@ const Cardabout = ({ img, name, role, email, twitter, twitterLink }) => {
 				</a>
 				<a href={twitterLink} target="_blank">
 					<div className="font-normal text-purple-900 dark:text-gray-400">
-						twitter: {twitter} 
+						twitter: {twitter}
 					</div>
 				</a>
 				<p></p>

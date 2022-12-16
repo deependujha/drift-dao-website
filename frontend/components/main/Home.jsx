@@ -7,10 +7,10 @@ import { TypeAnimation } from 'react-type-animation';
 const Home = () => {
 	return (
 		<div
+			id="home"
 			className="bg-[url('/images/bg.jpg')] h-auto"
 			style={{ height: '100vh' }}
 		>
-			<Navbar />
 			<div className=" text-center pt-24">
 				<div className="sm:text-8xl text-white font-bold italic text-6xl">
 					Engage with all
@@ -28,7 +28,7 @@ const Home = () => {
 							'in one app...',
 							2000,
 							() => {
-								console.log('Done typing!'); // Place optional callbacks anywhere in the array
+								// console.log('Done typing!'); // Place optional callbacks anywhere in the array
 							},
 						]}
 						cursor={true}
