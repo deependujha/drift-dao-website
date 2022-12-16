@@ -11,7 +11,7 @@ const navbar = () => {
     >
       <Navbar.Brand href="/">
         <span className="self-center whitespace-nowrap text-4xl font-semibold dark:text-white">
-          Drift
+          Drift-DAO
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">

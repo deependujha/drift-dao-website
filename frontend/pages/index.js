@@ -1,22 +1,21 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Home from '../components/main/Home';
-import Image from "next/image";
+import Image from 'next/image';
 import Product from '../components/main/Product';
-import About from '../components/main/About';
+import Team from '../components/main/Team';
 import Contact from '../components/main/Contact';
 
-
 const index = () => {
-  return (
-    <div>
-      {/* <Navbar /> */}
-      <Home />
-      <Product />
-      <About />
-      <Contact/>
-    </div>
-  );
-}
+	return (
+		<div>
+			{/* <Navbar /> */}
+			<Home />
+			<Product />
+			<Team />
+			<Contact />
+		</div>
+	);
+};
 
-export default index
+export default index;

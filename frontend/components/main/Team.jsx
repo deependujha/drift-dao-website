@@ -10,7 +10,7 @@ const About = () => {
             className="text-white text-6xl"
             style={{ transform: "rotate(270deg)" }}
           >
-            About us
+            Our team
           </div>
         </div>
         <div className="">
