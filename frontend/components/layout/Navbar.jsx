@@ -29,7 +29,7 @@ const navbar = () => {
 					className="mr-3"
 					onClick={onBoardDAO}
 				>
-					Onboard your DAO 🚀🔥
+					Onboard DAO 🚀🔥
 				</Button>
 				<Navbar.Toggle />
 			</div>

@@ -35,7 +35,6 @@ const Contact_form = () => {
 
 		if (name === '') {
 			msg = 'Please enter your name.';
-			message;
 		} else if (email === '') {
 			msg = 'Please enter your email.';
 		} else if (message === '') {
@@ -71,7 +70,8 @@ const Contact_form = () => {
 				method: 'post',
 				url: 'http://127.0.0.1:4000/contactForm',
 				headers: {
-					authorized_access_token: process.env.NEXT_PUBLIC_AUTHORIZED_ACCESS_TOKEN,
+					authorized_access_token:
+						process.env.NEXT_PUBLIC_AUTHORIZED_ACCESS_TOKEN,
 				},
 				data: {
 					name,

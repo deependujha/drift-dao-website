@@ -15,7 +15,8 @@ const DAOSchema = mongoose.Schema({
 		type: String,
 	},
 	dao_chain: {
-		type: [String],
+		type: String,
+		required: true,
 	},
 	dao_creator_address: {
 		type: String,
