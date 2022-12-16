@@ -5,7 +5,7 @@ import nodemailer from 'nodemailer';
 import cors from 'cors';
 import { DAOModel } from './database/models/DAOSchema.js';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());

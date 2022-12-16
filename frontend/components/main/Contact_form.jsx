@@ -1,6 +1,8 @@
+import 'dotenv/config';
 import React from 'react';
 import { Button, Label, TextInput, Textarea } from 'flowbite-react';
 import { useState } from 'react';
+import axios from 'axios';
 import swal from 'sweetalert';
 
 const initialValues = {
@@ -26,7 +28,7 @@ const Contact_form = () => {
 		return re.test(email);
 	}
 
-	const formSubmit = (e) => {
+	const formSubmit = async (e) => {
 		e.preventDefault();
 		const { name, email, message } = formdata;
 		let msg = '';
@@ -65,6 +67,19 @@ const Contact_form = () => {
 			});
 			// sendMailToUs(name, email, message);
 			setformdata(initialValues);
+			const result = await axios({
+				method: 'post',
+				url: 'http://127.0.0.1:4000/contactForm',
+				headers: {
+					authorized_access_token: process.env.NEXT_PUBLIC_AUTHORIZED_ACCESS_TOKEN,
+				},
+				data: {
+					name,
+					email,
+					message,
+				},
+			});
+			console.log(result);
 		}
 	};
 
