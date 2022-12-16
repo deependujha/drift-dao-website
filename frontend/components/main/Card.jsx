@@ -1,20 +1,27 @@
-import React from 'react'
+import React from 'react';
 import { Card } from 'flowbite-react';
 
-const Cardabout = () => {
-  return (
-    <div className="max-w-sm m-auto my-8">
-      <Card imgSrc="/images/bg.jpg">
-        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Noteworthy technology acquisitions 2021
-        </h5>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
-        </p>
-      </Card>
-    </div>
-  );
-}
+const Cardabout = ({ img, name, role, email, twitter, twitterLink }) => {
+	return (
+		<div className="max-w-sm m-auto my-8">
+			<Card imgSrc={img}>
+				<h5 className="text-2xl font-bold tracking-tight text-purple-900 dark:text-white">
+					{name}
+				</h5>
+				<a href={`mailto: ${email}`}>
+					<div className="font-normal text-pink-500 dark:text-gray-400">
+						email: {email}
+					</div>
+				</a>
+				<a href={twitterLink} target="_blank">
+					<div className="font-normal text-purple-900 dark:text-gray-400">
+						twitter: {twitter} 
+					</div>
+				</a>
+				<p></p>
+			</Card>
+		</div>
+	);
+};
 
-export default Cardabout
+export default Cardabout;
