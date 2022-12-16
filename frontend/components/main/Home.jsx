@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
 import Navbar from '../../components/layout/Navbar';
+import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
 	return (
@@ -11,14 +12,29 @@ const Home = () => {
 		>
 			<Navbar />
 			<div className=" text-center pt-24">
-				<div className="sm:text-9xl text-white font-bold italic text-6xl">
-					CONTEXT TO
+				<div className="sm:text-8xl text-white font-bold italic text-6xl">
+					Engage with all
 				</div>
-				<div className="sm:text-8xl text-white italic text-5xl mt-4">
-					EMPOWER
+				<div className="sm:text-6xl text-white italic text-5xl mt-4">
+					your DAOs
 				</div>
-				<div className="sm:text-5xl text-white my-6 text-2xl">
-					peoples in web3
+				<div className=" text-white italic  my-6">
+					<TypeAnimation
+						sequence={[
+							'effortlessly...', // Types 'One'
+							1000, // Waits 1s
+							'at one click...', // Deletes 'One' and types 'Two'
+							2000, // Waits 2s
+							'in one app...',
+							2000,
+							() => {
+								console.log('Done typing!'); // Place optional callbacks anywhere in the array
+							},
+						]}
+						cursor={true}
+						repeat={Infinity}
+						style={{ fontSize: '2em' }}
+					/>
 				</div>
 			</div>
 			<div className="flex justify-center">
