@@ -1,6 +1,9 @@
 import React from "react";
 import { Button, Label, TextInput, Textarea } from "flowbite-react";
 import { useState } from "react";
+import Alert from "../sweet_alert/Alert";
+import swal from "sweetalert";
+
 
 const initialValues = {
   name: "",
@@ -22,6 +25,7 @@ const Contact_form = () => {
   const formSubmit = (e) => {
     e.preventDefault();
     console.log("data :", formdata);
+    swal("Good job!", "You clicked the button!", "success");
     setformdata(initialValues);
   };
 
