@@ -13,11 +13,13 @@ function MyApp({ Component, pageProps }) {
 					content="A unified platform for all your DAOs."
 				/>
 				<meta
+					name="description"
+					content="A platform for the next generation to manage all your DAOs."
+				/>
+				<meta
 					name="keywords"
 					content="DAO, DAOs, Drift, Drift-DAO, DAO tooling, DAO platform, tooling, platform"
 				/>
-				{/* <meta name="author" content="Deependu Jha" /> */}
-				{/* <meta name="author" content="Nitesh Kumar" /> */}
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
 			<Navbar />

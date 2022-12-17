@@ -68,7 +68,7 @@ const Contact_form = () => {
 			setformdata(initialValues);
 			const result = await axios({
 				method: 'post',
-				url: 'http://65.0.20.26/contactForm',
+				url: 'https://www.backend.drift-dao.com/contactForm',
 				headers: {
 					authorized_access_token:
 						process.env.NEXT_PUBLIC_AUTHORIZED_ACCESS_TOKEN,
