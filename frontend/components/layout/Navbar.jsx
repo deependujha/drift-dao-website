@@ -15,10 +15,10 @@ const navbar = () => {
 			fluid={true}
 			rounded={false}
 			className="sticky top-0"
-			style={{ backgroundColor: '#170034', zIndex:10 }}
+			style={{ backgroundColor: '#170034', zIndex: 10 }}
 		>
 			<div>
-				<span className="self-center whitespace-nowrap text-4xl font-semibold text-pink-800 dark:text-white ">
+				<span className="self-center whitespace-nowrap text-2xl sm:text-4xl font-semibold text-pink-800 dark:text-white ">
 					<Link href="/">Drift-DAO</Link>
 				</span>
 			</div>
@@ -34,16 +34,16 @@ const navbar = () => {
 				<Navbar.Toggle />
 			</div>
 			<Navbar.Collapse>
-				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+				<div href="/navbars" className="lg:text-xl text-base text-gray-300 mb-2">
 					<Link href="/#home">Home</Link>
 				</div>
-				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+				<div href="/navbars" className="lg:text-xl text-base text-gray-300 mb-2">
 					<Link href="/#product">About</Link>
 				</div>
-				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+				<div href="/navbars" className="lg:text-xl text-base text-gray-300 mb-2">
 					<Link href="/#team">Our team</Link>
 				</div>
-				<div href="/navbars" className="text-xl text-gray-300 mb-2">
+				<div href="/navbars" className="lg:text-xl text-base text-gray-300 mb-2">
 					<Link href="/#contact">Contact us</Link>
 				</div>
 			</Navbar.Collapse>

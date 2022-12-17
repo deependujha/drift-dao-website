@@ -9,15 +9,15 @@ const Contact = () => {
 				<div className="sm:flex items-center justify-center sm:h-screen mt-5">
 					<div
 						style={{ position: 'relative' }}
-						className="md:h-96 md:w-96 h-44 w-44 m-auto "
+						className="md:h-72 md:w-72 lg:h-96 lg:w-96 h-44 w-44 m-auto "
 					>
 						<Image
 							src="/images/Net.svg"
 							fill={true}
 							alt="load.."
-							// 				sizes="(max-width: 768px) 100vw,
-							//   (max-width: 1200px) 50vw,
-							//   33vw"
+							sizes="(max-width: 768px) 100vw,
+							  (max-width: 1200px) 50vw,
+							  33vw"
 						/>
 					</div>
 				</div>

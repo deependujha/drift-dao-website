@@ -100,10 +100,7 @@ const OnBoardDAO = () => {
 	};
 
 	return (
-		<div
-			className="text-white mx-auto py-7 h-screen "
-			style={{ maxWidth: '500px' }}
-		>
+		<div className="text-white mx-auto py-7 min-h-screen" style={{ maxWidth: '500px' }}>
 			<form className="flex flex-col gap-4 mx-4 my-10">
 				<div>
 					<div className="mb-2 block">
