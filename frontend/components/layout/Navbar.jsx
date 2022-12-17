@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 const navbar = () => {
 	const router = useRouter();
 	const onBoardDAO = () => {
-		console.log('jai maata di');
+		// console.log('jai maata di');
 		router.push('/onBoardDAO');
 	};
 	return (
