@@ -9,20 +9,27 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+	cors({
+		origin: '*',
+		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+		preflightContinue: false,
+		optionsSuccessStatus: 204,
+	})
+);
 
 // middlewares
-const preventUnauthorizeAccess = async (req, res, next) => {
-	const { authorized_access_token } = req.headers;
-	// console.log('authorized_access_token: ', authorized_access_token);
-	if (authorized_access_token == process.env.AUTHORIZED_ACCESS_TOKEN) {
-		next();
-	} else {
-		res.send('You are not authorized to access the resources');
-	}
-};
+// const preventUnauthorizeAccess = async (req, res, next) => {
+// 	const { authorized_access_token } = req.headers;
+// 	// console.log('authorized_access_token: ', authorized_access_token);
+// 	if (authorized_access_token == process.env.AUTHORIZED_ACCESS_TOKEN) {
+// 		next();
+// 	} else {
+// 		res.send('You are not authorized to access the resources');
+// 	}
+// };
 
-app.use(preventUnauthorizeAccess);
+// app.use(preventUnauthorizeAccess);
 
 app.get('/', (req, res) => {
 	console.log(req.headers);

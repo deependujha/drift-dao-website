@@ -15,7 +15,7 @@ const navbar = () => {
 			fluid={true}
 			rounded={false}
 			className="sticky top-0"
-			style={{ backgroundColor: '#170034' }}
+			style={{ backgroundColor: '#170034', zIndex:10 }}
 		>
 			<div>
 				<span className="self-center whitespace-nowrap text-4xl font-semibold text-pink-800 dark:text-white ">
